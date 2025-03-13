@@ -5,9 +5,18 @@
   justify-content: center;
 }
 
+.header > h1 > a {
+  color: #000;
+  text-decoration: none;
+}
+
 .header_dark {
   background-color: #000;
+}
+
+.header_dark > h1 > a {
   color: #fff;
+  text-decoration: none;
 }
 
 .header__title {
