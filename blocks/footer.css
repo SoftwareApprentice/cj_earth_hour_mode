@@ -1,5 +1,5 @@
 .footer {
-  background-color: #fff;
+  /* background-color: #fff; */
   padding: 60px 80px;
   color: #000;
   display: flex;
@@ -14,4 +14,5 @@
 
 .footer__copyright {
   margin: 0;
+  opacity: 0.7;
 }

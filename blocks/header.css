@@ -1,6 +1,8 @@
 .header {
+  max-width: 1440px;
   background-color: #fff;
-  padding: 60px 80px;
+  padding: 10px 0;
+  margin: auto;
   display: flex;
   justify-content: center;
 }
