@@ -1,1 +1,15 @@
-/* Header CSS File */
+.header {
+  background-color: #fff;
+  padding: 60px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.header_dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.header__title {
+  margin: 0;
+}
