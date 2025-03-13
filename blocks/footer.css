@@ -1,1 +1,17 @@
-/* Footer CSS File */
+.footer {
+  background-color: #fff;
+  padding: 60px 80px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.footer_dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.footer__copyright {
+  margin: 0;
+}
