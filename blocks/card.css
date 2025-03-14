@@ -17,7 +17,7 @@
 .card__image{
     width: 100%;
 }
-.card__text{
+.card__header{
     text-align: center;
 }
 .card__link{
