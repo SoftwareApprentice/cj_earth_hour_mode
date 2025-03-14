@@ -1,1 +1,26 @@
 /* Card CSS File */
+
+.cards{
+    display: flex;
+    list-style-type: none;
+    gap: 24px;
+}
+.card{
+    max-width: 300px;
+    border: 1px solid black;
+    border-radius: 12px;
+    background-color: white;
+}
+.card:hover{
+    background-color: yellow;
+}
+.card__image{
+    width: 100%;
+}
+.card__text{
+    text-align: center;
+}
+.card__link{
+    color: black;
+    text-decoration: none;
+}
