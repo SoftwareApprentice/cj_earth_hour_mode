@@ -1,12 +1,12 @@
 const cards = [
     {
-        link: "https://www.w3schools.com/css/css3_object-fit.asp",
+        link: "#lights",
         img: "../images/lightbulb.png",
         alt: "Lightbulb",
         header: "Turn Off Lights"
     },
     {
-        link: "https://www.w3schools.com/css/css3_object-fit.asp",
+        link: "#unplug",
         img: "../images/plug.png",
         alt: "Plug",
         header: "Unplug Unused Devices"
@@ -25,21 +25,21 @@ cards.forEach((card) => {
     const cardLink = document.createElement("a");
     cardLink.href = card.link;
     cardLink.classList.add("card__link")
-    cardItem.append(cardLink);
 
     //Create the card image, add appropriate class and append to card item
     const cardImg = document.createElement("img");
     cardImg.classList.add("card__image")
     cardImg.src = card.img;
     cardImg.alt = card.alt;
-    cardItem.appendChild(cardImg);
+    cardLink.appendChild(cardImg);
 
     //Create the card header, add appropriate class and append to card item
     const cardHeader = document.createElement("h2");
     cardHeader.classList.add("card__header")
     cardHeader.textContent = card.header;
-    cardItem.appendChild(cardHeader);
+    cardLink.appendChild(cardHeader);
 
     //Finally append the card item to the card list
+    cardItem.append(cardLink);
     cardList.append(cardItem);
 })
