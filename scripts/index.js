@@ -13,19 +13,19 @@ const cards = [
   },
   {
     link: "#shower",
-    img: "../images/shower.png",
+    img: "../images/lightbulb.png",
     alt: "Shower",
     header: "Take Shorter Showers",
   },
   {
     link: "#water",
-    img: "../images/water.png",
+    img: "../images/plug.png",
     alt: "Water",
     header: "Use Less Water",
   },
   {
     link: "#recycle",
-    img: "../images/recycle.png",
+    img: "../images/lightbulb.png",
     alt: "Recycle",
     header: "Recycle More",
   },
@@ -73,4 +73,6 @@ function addPledge(evt) {
   console.log(pledge);
   const pledgeWall = document.querySelector(".pledges");
   const pledgeEl = document.createElement("li");
+  pledgeEl.textContent = `${name} pledged to reduce their carbon footprint by ${pledge}!`
+  pledgeWall.append(pledgeEl);
 }
