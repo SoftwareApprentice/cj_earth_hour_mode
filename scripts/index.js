@@ -30,7 +30,8 @@ const cards = [
     header: "Recycle More",
   },
 ];
-//const pledges = [{ name: "Modesto", pledge: "unplugging unused devices" }];
+//Debugging tool to remove all pledges on wall
+//localStorage.removeItem("pledges");
 const pledges = JSON.parse(localStorage.getItem("pledges") || "[]");
 
 // Create a new card for each element in cards array.
@@ -80,7 +81,10 @@ function addPledge(evt) {
   pledgeEl.textContent = `${name} pledged to reduce their carbon footprint by ${pledge}!`;
   pledgeWall.append(pledgeEl);
 
-  
+  pledges.push({name: name, pledge: pledge});
+  localStorage.setItem("pledges", JSON.stringify(pledges));
+
+
 }
 
 function loadPledges() {
