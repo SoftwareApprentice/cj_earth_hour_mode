@@ -1,3 +1,4 @@
+//List of Cards
 const cards = [
   {
     link: "#lights",
@@ -31,6 +32,7 @@ const cards = [
   },
 ];
 
+//Initial Pledges
 const initialPledges = [
   {
     name: "Modesto",
@@ -49,9 +51,12 @@ const initialPledges = [
     pledge: "washing laundry at a colder temperature",
   },
 ];
+
 //Debugging tool to remove all pledges on wall
 //localStorage.removeItem("pledges");
-const pledges = JSON.parse(localStorage.getItem("pledges") || '[]');
+
+//Load pledges from local storage, if there are no pledges create an empty array
+const pledges = JSON.parse(localStorage.getItem("pledges") || "[]");
 
 // Create a new card for each element in cards array.
 cards.forEach((card) => {
@@ -84,32 +89,38 @@ cards.forEach((card) => {
   cardList.append(cardItem);
 });
 
+//Add event listener to pledge form submit button to add pledge
 const pledgeForm = document.querySelector(".pledge__form");
 pledgeForm.addEventListener("submit", addPledge);
 
+//Load pledges onto the page
 loadPledges();
 
 function addPledge(evt) {
+  //Prevent page refresh
   evt.preventDefault();
+
+  //Get values from name and pledge input
   const name = document.querySelector(".pledge__name").value;
-  console.log(name);
   const pledge = document.querySelector("#pledges").value;
-  console.log(pledge);
+
+  //Identify pledge list and append a new list item to it
   const pledgeWall = document.querySelector(".pledges");
   const pledgeEl = document.createElement("li");
   pledgeEl.textContent = `${name} pledged to reduce their carbon footprint by ${pledge}!`;
   pledgeWall.append(pledgeEl);
 
+  //Push pledge onto local storage JSON.
   pledges.push({ name: name, pledge: pledge });
   localStorage.setItem("pledges", JSON.stringify(pledges));
 }
 
 function loadPledges() {
+  //If pledges doesnt exist in local storage, create a pledge array from initial pledges
   if (localStorage.getItem("pledges") == null) {
-    console.log("no pledges");
     localStorage.setItem("pledges", JSON.stringify(initialPledges));
   } else {
-    console.log(pledges);
+    //For each pledge, create a list item to append to list of pledges
     pledges.forEach((pledge) => {
       console.log(pledge);
       const name = pledge.name;
