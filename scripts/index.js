@@ -1,16 +1,41 @@
 //List of Cards
+// Test
 const cards = [
   {
-    link: "#lights",
-    img: "../images/lightbulb.png",
-    alt: "Lightbulb",
+    link: "#lightswitch",
+    img: "../images/lightswitch_icon.png",
+    alt: "Lightswitch",
     header: "Turn Off Lights",
   },
   {
     link: "#unplug",
-    img: "../images/plug.png",
-    alt: "Plug",
+    img: "../images/unplug_icon.png",
+    alt: "Unplug",
     header: "Unplug Unused Devices",
+  },
+  {
+    link: "#solar",
+    img: "../images/icons/solar_icon.jpg",
+    alt: "Solar",
+    header: "Use Solar Devices",
+  },
+  {
+    link: "#laundry",
+    img: "../images/laundry_icon.png",
+    alt: "laundry",
+    header: "Use Cold Water",
+  },
+  {
+    link: "#led",
+    img: "../images/led_icon.png",
+    alt: "LED",
+    header: "Use LED Lights",
+  },
+  {
+    link: "#thermostat",
+    img: "../images/thermostat_icon.png",
+    alt: "Thermostat",
+    header: "Keep Thermostat Low",
   },
   {
     link: "#shower",
