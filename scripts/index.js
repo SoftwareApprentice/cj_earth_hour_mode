@@ -30,9 +30,28 @@ const cards = [
     header: "Recycle More",
   },
 ];
+
+const initialPledges = [
+  {
+    name: "Modesto",
+    pledge: "washing laundry at a colder temperature",
+  },
+  {
+    name: "Aaron",
+    pledge: "switching to paper products from plastic",
+  },
+  {
+    name: "Stephanie",
+    pledge: "unplugging unused devices",
+  },
+  {
+    name: "Pasha",
+    pledge: "washing laundry at a colder temperature",
+  },
+];
 //Debugging tool to remove all pledges on wall
 //localStorage.removeItem("pledges");
-const pledges = JSON.parse(localStorage.getItem("pledges") || "[]");
+const pledges = JSON.parse(localStorage.getItem("pledges") || '[]');
 
 // Create a new card for each element in cards array.
 cards.forEach((card) => {
@@ -81,27 +100,24 @@ function addPledge(evt) {
   pledgeEl.textContent = `${name} pledged to reduce their carbon footprint by ${pledge}!`;
   pledgeWall.append(pledgeEl);
 
-  pledges.push({name: name, pledge: pledge});
+  pledges.push({ name: name, pledge: pledge });
   localStorage.setItem("pledges", JSON.stringify(pledges));
-
-
 }
 
 function loadPledges() {
   if (localStorage.getItem("pledges") == null) {
     console.log("no pledges");
-    localStorage.setItem("pledges", JSON.stringify(pledges));
-  }
-  else{
+    localStorage.setItem("pledges", JSON.stringify(initialPledges));
+  } else {
     console.log(pledges);
     pledges.forEach((pledge) => {
-        console.log(pledge);
-        const name = pledge.name;
-        const text = pledge.pledge;
-        const pledgeEl = document.createElement("li");
-        const pledgeWall = document.querySelector(".pledges");
-        pledgeEl.textContent = `${name} pledged to reduce their carbon footprint by ${text}!`;
-        pledgeWall.append(pledgeEl);
-    })
+      console.log(pledge);
+      const name = pledge.name;
+      const text = pledge.pledge;
+      const pledgeEl = document.createElement("li");
+      const pledgeWall = document.querySelector(".pledges");
+      pledgeEl.textContent = `${name} pledged to reduce their carbon footprint by ${text}!`;
+      pledgeWall.append(pledgeEl);
+    });
   }
 }
