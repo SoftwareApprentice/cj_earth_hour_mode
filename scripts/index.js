@@ -52,8 +52,6 @@ const initialPledges = [
   },
 ];
 
-//Debugging tool to remove all pledges on wall
-//localStorage.removeItem("pledges");
 
 //Load pledges from local storage, if there are no pledges create an empty array
 const pledges = JSON.parse(localStorage.getItem("pledges") || "[]");
@@ -93,6 +91,9 @@ cards.forEach((card) => {
 const pledgeForm = document.querySelector(".pledge__form");
 pledgeForm.addEventListener("submit", addPledge);
 
+const deleteBtn = document.querySelector(".pledge__delete-btn");
+deleteBtn.addEventListener("click", deletePledges);
+
 //Load pledges onto the page
 loadPledges();
 
@@ -131,4 +132,11 @@ function loadPledges() {
       pledgeWall.append(pledgeEl);
     });
   }
+}
+
+function deletePledges(evt){
+  //Debugging tool to remove all pledges on wall
+  console.log("deleting pledges...")
+  localStorage.removeItem("pledges");
+  window.location.reload();
 }
