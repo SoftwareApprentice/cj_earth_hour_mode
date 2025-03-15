@@ -30,6 +30,8 @@ const cards = [
     header: "Recycle More",
   },
 ];
+//const pledges = [{ name: "Modesto", pledge: "unplugging unused devices" }];
+const pledges = JSON.parse(localStorage.getItem("pledges") || "[]");
 
 // Create a new card for each element in cards array.
 cards.forEach((card) => {
@@ -65,6 +67,8 @@ cards.forEach((card) => {
 const pledgeForm = document.querySelector(".pledge__form");
 pledgeForm.addEventListener("submit", addPledge);
 
+loadPledges();
+
 function addPledge(evt) {
   evt.preventDefault();
   const name = document.querySelector(".pledge__name").value;
@@ -73,6 +77,27 @@ function addPledge(evt) {
   console.log(pledge);
   const pledgeWall = document.querySelector(".pledges");
   const pledgeEl = document.createElement("li");
-  pledgeEl.textContent = `${name} pledged to reduce their carbon footprint by ${pledge}!`
+  pledgeEl.textContent = `${name} pledged to reduce their carbon footprint by ${pledge}!`;
   pledgeWall.append(pledgeEl);
+
+  
+}
+
+function loadPledges() {
+  if (localStorage.getItem("pledges") == null) {
+    console.log("no pledges");
+    localStorage.setItem("pledges", JSON.stringify(pledges));
+  }
+  else{
+    console.log(pledges);
+    pledges.forEach((pledge) => {
+        console.log(pledge);
+        const name = pledge.name;
+        const text = pledge.pledge;
+        const pledgeEl = document.createElement("li");
+        const pledgeWall = document.querySelector(".pledges");
+        pledgeEl.textContent = `${name} pledged to reduce their carbon footprint by ${text}!`;
+        pledgeWall.append(pledgeEl);
+    })
+  }
 }
