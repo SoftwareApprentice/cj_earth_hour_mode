@@ -43,3 +43,16 @@ cards.forEach((card) => {
     cardItem.append(cardLink);
     cardList.append(cardItem);
 })
+
+const pledgeForm = document.querySelector(".pledge__form");
+pledgeForm.addEventListener("submit", addPledge);
+
+function addPledge(evt){
+    evt.preventDefault();
+    const name = document.querySelector(".pledge__name").value;
+    console.log(name);
+    const pledge = document.querySelector("#pledges").value;
+    console.log(pledge);
+    const pledgeWall = document.querySelector(".pledges");
+    const pledgeEl = document.createElement("li")
+}
