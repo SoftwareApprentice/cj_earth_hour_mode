@@ -1,51 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/index.css" />
-    <title>Earth Hour Mode</title>
-  </head>
-  <body>
-    <div class="page">
-      <header class="header">
-        <h1 class="header__title">
-          <!-- change the href to target section -->
-          <a href="#cards">Earth Hour Mode</a>
-        </h1>
-      </header>
-      <main>
-        <ul class="cards"></ul>
-        <section class="pledgeWall">
-          <h2>How Will You Contribute?</h2>
-          <form class="pledge__form">
-            I,
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/index.css" />
+  <title>Earth Hour Mode</title>
+</head>
+<body>
+<div class="page">
+  <header class="header">
+    <h1 class="header__title">
+      <!-- change the href to target section -->
+      <a href="#cards">Earth Hour Mode</a>
+    </h1>
+  </header>
+  <main>
+    <ul class="cards">
+      <template id="card-template">
+        <li class="card">
+          <button class="card__info" type="button">
+            <img class="card__image" />
+          </button>
+          <h2 class="card__title"></h2>
+        </li>
+      </template>
+    </ul>
+    <section class="pledgeWall">
+      <h2>How Will You Contribute?</h2>
+      <form class="pledge__form">
+        <p>
+          I,
+          <label for="pledge-name">
             <input
               type="text"
+              id="pledge-name"
               class="pledge__name"
-              placeholder="Name"
+              placeholder="Your Name"
               required
-            />
-            pledge to reduce my carbon footprint by
-            <select name="pledges" id="pledges">
-              <option value="unplugging unused devices">unplugging unused devices</option>
-              <option value="switching to paper products from plastic">
-                switching to paper products from plastic
-              </option>
-              <option value="washing laundry at a colder temperature">
-                washing laundry at a colder temperature
-              </option>
-            </select>
-            <button type="submit" class="pledge__submit-btn">Pledge</button>
-          </form>
-          <ul class="pledges">
-          </ul>
-        </section>
-      </main>
-      <footer class="footer">
-        <p class="footer__copyright">&copy;2025 S.P.A.M</p>
-      </footer>
+            /> </label
+          >, pledge to reduce my carbon footprint by
+        </p>
+
+        <label for="pledges" class="pledge__label">
+          <select name="pledges" id="pledges" class="pledge__select">
+            <option value="unplugging unused devices">
+              Unplugging unused devices
+            </option>
+            <option value="switching to paper products from plastic">
+              Switching to paper products from plastic
+            </option>
+            <option value="washing laundry at a colder temperature">
+              Washing laundry at a colder temperature
+            </option>
+          </select>
+        </label>
+
+        <button type="submit" class="pledge__submit-btn">Pledge</button>
+      </form>
+      <ul class="pledges">
+        <!-- Pledges will be dynamically added here -->
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright">&copy;2025 S.P.A.M</p>
+  </footer>
+  <div class="popup" id="card-info-popup">
+    <div class="popup__overlay">
+      <div class="popup__container">
+        <h2 class="popup__title">
+          <!-- This text will be dynamically added -->
+        </h2>
+        <p class="popup__text">
+          <!-- This text will be dynamically added -->
+        </p>
+      </div>
+      <button
+        type="button"
+        class="popup__close popup__close-button"
+        id="card-info-close"
+      ></button>
     </div>
-    <script src="/scripts/index.js"></script>
-  </body>
+  </div>
+</div>
+<script type="module" src="./scripts/index.js"></script>
+</body>
 </html>

@@ -1,93 +1,25 @@
-//List of Cards
-const cards = [
-  {
-    link: "#lights",
-    img: "../images/lightbulb.png",
-    alt: "Lightbulb",
-    header: "Turn Off Lights",
-  },
-  {
-    link: "#unplug",
-    img: "../images/plug.png",
-    alt: "Plug",
-    header: "Unplug Unused Devices",
-  },
-  {
-    link: "#shower",
-    img: "../images/lightbulb.png",
-    alt: "Shower",
-    header: "Take Shorter Showers",
-  },
-  {
-    link: "#water",
-    img: "../images/plug.png",
-    alt: "Water",
-    header: "Use Less Water",
-  },
-  {
-    link: "#recycle",
-    img: "../images/lightbulb.png",
-    alt: "Recycle",
-    header: "Recycle More",
-  },
-];
+import * as constants from "../utils/constants.js";
+import Section from "../components/Section.js";
+import Card from "../components/Card.js";
 
-//Initial Pledges
-const initialPledges = [
-  {
-    name: "Modesto",
-    pledge: "washing laundry at a colder temperature",
-  },
-  {
-    name: "Aaron",
-    pledge: "switching to paper products from plastic",
-  },
-  {
-    name: "Stephanie",
-    pledge: "unplugging unused devices",
-  },
-  {
-    name: "Pasha",
-    pledge: "washing laundry at a colder temperature",
-  },
-];
-
-//Debugging tool to remove all pledges on wall
-//localStorage.removeItem("pledges");
-
-//Load pledges from local storage, if there are no pledges create an empty array
-const pledges = JSON.parse(localStorage.getItem("pledges") || "[]");
-
-// Create a new card for each element in cards array.
-cards.forEach((card) => {
-  //Identify Card List
-  const cardList = document.querySelector(".cards");
-  //Create a new card list item
-  const cardItem = document.createElement("li");
-  cardItem.classList.add("card");
-
-  //Create the link for the card, add appropriate class
-  const cardLink = document.createElement("a");
-  cardLink.href = card.link;
-  cardLink.classList.add("card__link");
-
-  //Create the card image, add appropriate class and append to card link
-  const cardImg = document.createElement("img");
-  cardImg.classList.add("card__image");
-  cardImg.src = card.img;
-  cardImg.alt = card.alt;
-  cardLink.appendChild(cardImg);
-
-  //Create the card header, add appropriate class and append to card link
-  const cardHeader = document.createElement("h2");
-  cardHeader.classList.add("card__header");
-  cardHeader.textContent = card.header;
-  cardLink.appendChild(cardHeader);
-
-  //Finally append the card link to the card item then to the card list
-  cardItem.append(cardLink);
-  cardList.append(cardItem);
-});
+const cardList = new Section(
+    {
+      items: constants.cards,
+      renderer: (item) => new Card(item, constants.cardSelectors, {
+        popupRenderer: (data) => {
+          const popup = document.querySelector(constants.popupCardInfoSelectors.popup);
+          popup.classList.add("popup_visible");
+          popup.querySelector(constants.popupCardInfoSelectors.popupTitle).textContent = data.title;
+          popup.querySelector(constants.popupCardInfoSelectors.popupText).textContent = data.text;
+          popup.querySelector(constants.popupCardInfoSelectors.popupCloseButton).addEventListener("click", () => {
+            popup.classList.remove("popup_visible");
+          });
+        }
+      }).getCard()
+    },
+    ".cards"
+);
+cardList.renderItems();
 
 //Add event listener to pledge form submit button to add pledge
 const pledgeForm = document.querySelector(".pledge__form");
@@ -111,17 +43,17 @@ function addPledge(evt) {
   pledgeWall.append(pledgeEl);
 
   //Push pledge onto local storage JSON.
-  pledges.push({ name: name, pledge: pledge });
-  localStorage.setItem("pledges", JSON.stringify(pledges));
+  constants.pledges.push({name: name, pledge: pledge});
+  localStorage.setItem("pledges", JSON.stringify(constants.pledges));
 }
 
 function loadPledges() {
   //If pledges doesnt exist in local storage, create a pledge array from initial pledges
   if (localStorage.getItem("pledges") == null) {
-    localStorage.setItem("pledges", JSON.stringify(initialPledges));
+    localStorage.setItem("pledges", JSON.stringify(constants.initialPledges));
   } else {
     //For each pledge, create a list item to append to list of pledges
-    pledges.forEach((pledge) => {
+    constants.pledges.forEach((pledge) => {
       console.log(pledge);
       const name = pledge.name;
       const text = pledge.pledge;
