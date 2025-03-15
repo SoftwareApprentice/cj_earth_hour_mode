@@ -16,6 +16,34 @@
       </header>
       <main>
         <ul class="cards"></ul>
+        <section class="pledgeWall">
+          <h2>How Will You Contribute?</h2>
+          <form class="pledge__form">
+            I,
+            <input
+              type="text"
+              class="pledge__name"
+              placeholder="Name"
+              required
+            />
+            pledge to reduce my carbon footprint by
+            <select name="pledges" id="pledges">
+              <option value="unplug">unplugging unused devices</option>
+              <option value="plastic">
+                switching to paper products from plastic
+              </option>
+              <option value="wash">
+                washing laundry at a colder temperature
+              </option>
+            </select>
+            <button type="submit">Pledge</button>
+          </form>
+          <ul class="pledges">
+            <li class="pledge">
+              Modesto pledges to reduce his carbon footprint
+            </li>
+          </ul>
+        </section>
       </main>
       <footer class="footer">
         <p class="footer__copyright">&copy;2025 S.P.A.M</p>
