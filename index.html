@@ -15,131 +15,35 @@
         </h1>
       </header>
       <main>
-        <ul class="cards">
-          <li class="card">
-            <img class="card__image" src="./images/LED.png" alt="led" />
-            <h2 class="card__title">Use LED lights</h2>
-            <ul class="card__description">
-              <li>last longer than traditional light bulbs</li>
-              <li>use up to 80% less electricity</li>
-              <li>durable and eco-friendly</li>
-            </ul>
-            <!-- <p class="card__description">Join us in making a difference.</p> -->
-          </li>
-
-          <li class="card">
-            <img class="card__image" src="./images/Laundry.png" alt="laundry" />
-            <h2 class="card__title">Wash at a cold temperature</h2>
-            <ul class="card__description">
-              <li>reduces the need to heat water</li>
-              <li>helps garments to last longer</li>
-              <li>
-                cold water is gentler on fabrics, prevents shrinkage and fading
-              </li>
-            </ul>
-            <!-- <p class="card__description">Join us in making a difference.</p> -->
-          </li>
-
-          <li class="card">
-            <img
-              class="card__image"
-              src="./images/Lightswitch.png"
-              alt="lightswitch"
+        <ul class="cards"></ul>
+        <section class="pledgeWall">
+          <h2>How Will You Contribute?</h2>
+          <form class="pledge__form">
+            I,
+            <input
+              type="text"
+              class="pledge__name"
+              placeholder="Name"
+              required
             />
-            <h2 class="card__title">Turn off lights when not in use</h2>
-            <ul class="card__description">
-              <li>extends the lifespan of the bulbs</li>
-              <li>saves energy, reducing electricity bills</li>
-              <li>promotes sustainability by conserving resources</li>
-            </ul>
-            <!-- <p class="card__description">Join us in making a difference.</p> -->
-          </li>
-
-          <li class="card">
-            <img class="card__image" src="./images/Unplug.png" alt="unplug" />
-            <h2 class="card__title">Unplug devices when not in use</h2>
-            <ul class="card__description">
-              <li>prevents "phantom energy" consumption</li>
-              <li>
-                extends the lifespan of devices, protecting them from power
-                surges
-              </li>
-              <li>
-                saves money on electricity bills, reducing overall energy waste
-              </li>
-            </ul>
-            <!-- <p class="card__description">Join us in making a difference.</p> -->
-          </li>
-
-          <li class="card">
-            <img
-              class="card__image"
-              src="./images/Thermostat.png"
-              alt="thermostat"
-            />
-            <h2 class="card__title">Keep thermostat at a low temp</h2>
-            <ul class="card__description">
-              <li>leading to lower heating costs</li>
-              <li>reduced carbon footprint</li>
-              <li>
-                decreases the strain on heating systems, extending their
-                lifespan
-              </li>
-            </ul>
-            <!-- <p class="card__description">Join us in making a difference.</p> -->
-          </li>
-
-          <li class="card">
-            <img
-              class="card__image"
-              src="./images/Solar.png"
-              alt="lightswitch"
-            />
-            <h2 class="card__title">Use solar powered devices</h2>
-            <ul class="card__description">
-              <li>eeduces reliance on non-renewable energy sources</li>
-              <li>
-                helps lower greenhouse gas emissions and combat climate change
-              </li>
-              <li>
-                harnessing free energy from the sun, decreases electricity
-                demand from the grid
-              </li>
-            </ul>
-            <!-- <p class="card__description">Join us in making a difference.</p> -->
-          </li>
-
-          <!-- <li class="card"> 
-            <img class="card__image" src="./images/Laundry.png" alt="laundry" />
-            <h2 class="card__title">Wash at a cold temperature</h2>
-            <ul class="card__description">
-              <li>reduces the need to heat water</li>
-              <li>helps garments to last longer</li>
-              <li>
-                cold water is gentler on fabrics, prevents shrinkage and fading
-              </li>
-            </ul>
-            <!-- <p class="card__description">Join us in making a difference.</p> -->
-          <!-- </li> -->
-
-          <li class="card">
-            <img class="card__image" src="images/card2.jpg" alt="Switch Off" />
-            <h2 class="card__title">Switch Off</h2>
-            <p class="card__description">Turn off your lights for one hour.</p>
-          </li>
-
-          <li class="card">
-            <a href="#card3" class="card__link">
-              <img
-                src="images/card3.jpg"
-                alt="Join the Movement"
-                class="card__image"
-              />
-              <h2 class="card__title">Join the Movement</h2>
-              <p class="card__description">Be part of a global community.</p>
-            </a>
-          </li>
-        </ul>
+            pledge to reduce my carbon footprint by
+            <select name="pledges" id="pledges">
+              <option value="unplug">unplugging unused devices</option>
+              <option value="plastic">
+                switching to paper products from plastic
+              </option>
+              <option value="wash">
+                washing laundry at a colder temperature
+              </option>
+            </select>
+            <button type="submit">Pledge</button>
+          </form>
+          <ul class="pledges">
+            <li class="pledge">
+              Modesto pledges to reduce his carbon footprint
+            </li>
+          </ul>
+        </section>
       </main>
       <footer class="footer">
         <p class="footer__copyright">&copy;2025 S.P.A.M</p>
