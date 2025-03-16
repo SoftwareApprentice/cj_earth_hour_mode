@@ -1,0 +1,38 @@
+.about {
+  width: 100%;
+  background-color: #000;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 100px;
+}
+
+.about_dark {
+  background-color: #f1f1f1;
+  color: #1f1f1f;
+}
+
+.about__logo {
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+}
+
+.about__content {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 40px;
+}
+.about__title {
+  margin: 0 0 10px;
+}
+
+.about__paragraph {
+  width: 40%;
+  margin: 0;
+  text-align: center;
+}

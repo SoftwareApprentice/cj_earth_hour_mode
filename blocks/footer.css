@@ -1,14 +1,18 @@
 .footer {
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 60px 80px;
-  color: #000;
+  background-color: #1f1f1f;
+  color: #f1f1f1;
   display: flex;
   justify-content: center;
   align-items: end;
+  box-sizing: border-box;
 }
 
 .footer_dark {
-  background-color: #000;
-  color: #fff;
+  background-color: #f1f1f1;
+  color: #1f1f1f;
 }
 
 .footer__copyright {
