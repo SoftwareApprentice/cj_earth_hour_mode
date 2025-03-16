@@ -8,10 +8,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../images/sustainable_city.gif);
+  background-image: url(../images/header_bp.webp);
   background-repeat: none;
   background-size: cover;
   background-position: center;
+}
+
+.header__content_dark {
+  background-image: url(../images/header_bp_dark.webp);
 }
 
 .header__link {
