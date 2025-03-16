@@ -1,16 +1,15 @@
 //List of Cards
-// Test
 const cards = [
   {
     link: "#lightswitch",
-    img: "../images/lightswitch_icon.png",
+    img: "../images/icons/lightswitch_icon.jpg",
     alt: "Lightswitch",
     header: "Turn Off Lights",
   },
   {
-    link: "#unplug",
-    img: "../images/unplug_icon.png",
-    alt: "Unplug",
+    link: "#plug",
+    img: "../images/icons/plug_icon.png",
+    alt: "plug",
     header: "Unplug Unused Devices",
   },
   {
@@ -21,39 +20,21 @@ const cards = [
   },
   {
     link: "#laundry",
-    img: "../images/laundry_icon.png",
+    img: "../images/icons/laundry_icon.jpg",
     alt: "laundry",
     header: "Use Cold Water",
   },
   {
     link: "#led",
-    img: "../images/led_icon.png",
+    img: "../images/icons/led_icon.jpg",
     alt: "LED",
     header: "Use LED Lights",
   },
   {
     link: "#thermostat",
-    img: "../images/thermostat_icon.png",
+    img: "../images/icons/thermostat_icon.png",
     alt: "Thermostat",
     header: "Keep Thermostat Low",
-  },
-  {
-    link: "#shower",
-    img: "../images/lightbulb.png",
-    alt: "Shower",
-    header: "Take Shorter Showers",
-  },
-  {
-    link: "#water",
-    img: "../images/plug.png",
-    alt: "Water",
-    header: "Use Less Water",
-  },
-  {
-    link: "#recycle",
-    img: "../images/lightbulb.png",
-    alt: "Recycle",
-    header: "Recycle More",
   },
 ];
 
