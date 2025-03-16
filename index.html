@@ -8,15 +8,30 @@
   </head>
   <body>
     <div class="page">
-      <header class="header">
-        <h1 class="header__title">
-          <!-- change the href to target section -->
-          <a href="#cards">Earth Hour Mode</a>
-        </h1>
+      <header class="header header_dark">
+        <nav class="nav nav_dark">
+          <img
+            src="./images/Logo.png"
+            alt="Earth Hour Logo"
+            class="nav__logo"
+          />
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#contribute" class="nav__link">Contribute</a>
+            </li>
+            <li class="nav__item">
+              <a href="#pledge-wall" class="nav__link">Pledge Wall</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
       </header>
+
       <main>
         <ul class="cards"></ul>
-        <section class="pledgeWall">
+        <section class="pledgeWall" id="pledge-wall">
           <h2>How Will You Contribute?</h2>
           <form class="pledge__form">
             I,
@@ -28,7 +43,9 @@
             />
             pledge to reduce my carbon footprint by
             <select name="pledges" id="pledges">
-              <option value="unplugging unused devices">unplugging unused devices</option>
+              <option value="unplugging unused devices">
+                unplugging unused devices
+              </option>
               <option value="switching to paper products from plastic">
                 switching to paper products from plastic
               </option>
@@ -38,12 +55,11 @@
             </select>
             <button type="submit" class="pledge__submit-btn">Pledge</button>
           </form>
-          <ul class="pledges">
-          </ul>
+          <ul class="pledges"></ul>
           <button class="pledge__delete-btn">Delete Pledges</button>
         </section>
       </main>
-      <footer class="footer">
+      <footer class="footer" id="contacts">
         <p class="footer__copyright">&copy;2025 S.P.A.M</p>
       </footer>
     </div>
