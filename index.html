@@ -8,28 +8,33 @@
   </head>
   <body>
     <div class="page">
-      <nav class="nav nav_dark">
-        <img src="./images/Logo.png" alt="Earth Hour Logo" class="nav__logo" />
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#contribute" class="nav__link">Contribute</a>
-          </li>
-          <li class="nav__item">
-            <a href="#pledge-wall" class="nav__link">Pledge Wall</a>
-          </li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contacts" class="nav__link">Contacts</a>
-          </li>
-        </ul>
-      </nav>
       <header class="header">
-        <a href="#about" class="header__link">About Earth Hour</a>
+        <nav class="nav nav_dark">
+          <img
+            src="./images/Logo.png"
+            alt="Earth Hour Logo"
+            class="nav__logo"
+          />
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#contribute" class="nav__link">Contribute</a>
+            </li>
+            <li class="nav__item">
+              <a href="#pledge-wall" class="nav__link">Pledge Wall</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__content header__content_dark">
+          <a href="#about" class="header__link">About Earth Hour</a>
+        </div>
       </header>
-
-      <main>
+      <main class="content">
         <ul class="cards"></ul>
         <section class="pledgeWall" id="pledge-wall">
           <h2>How Will You Contribute?</h2>
@@ -59,10 +64,13 @@
           <button class="pledge__delete-btn">Delete Pledges</button>
         </section>
         <section class="about" id="about">
-          <h1 class="about__title">About Title</h1>
-          <p class="about__paragraph">part 1</p>
-          <p class="about__paragraph">part 2</p>
-          <p class="about__paragraph">part 3</p>
+          <img src="" alt="" class="about__image" />
+          <div class="about__content">
+            <h1 class="about__title">About Title</h1>
+            <p class="about__paragraph">part 1</p>
+            <p class="about__paragraph">part 2</p>
+            <p class="about__paragraph">part 3</p>
+          </div>
         </section>
       </main>
       <footer class="footer" id="contacts">
