@@ -19,13 +19,13 @@
 }
 
 .header__link {
-  width: 10%;
-  height: 1%;
+  min-width: fit-content;
+  min-height: fit-content;
   background-color: #fdfd1f;
   color: #4b4b4d;
   border: 1px solid rgba(33, 33, 33, 0.8);
   border-radius: 30px;
-  padding: 20px 10px;
+  padding: 15px 40px;
   margin-top: 25%;
   text-decoration: none;
   display: flex;
