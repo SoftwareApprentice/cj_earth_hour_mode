@@ -1,26 +1,23 @@
 .header {
   max-width: 1440px;
-  background-color: #fff;
-  padding: 10px 0;
+  background-image: url(../images/header_bg.png);
   margin: auto;
-  display: flex;
-  justify-content: center;
 }
 
-.header > h1 > a {
+/* .header > h1 > a {
   color: #000;
   text-decoration: none;
-}
+} */
 
 .header_dark {
-  background-color: #000;
+  background-image: url(../images/header_bg_dark.png);
 }
 
-.header_dark > h1 > a {
+/* .header_dark > h1 > a {
   color: #fff;
   text-decoration: none;
-}
+} */
 
-.header__title {
+/* .header__title {
   margin: 0;
-}
+} */

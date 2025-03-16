@@ -1,0 +1,40 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_dark > .nav__list > .nav__item > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__logo {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50px;
+  margin: 0.5% 0 0.5% 2%;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0 2% 0 auto;
+  padding: 0;
+  column-gap: 20px;
+}
+
+.nav__link {
+  color: #000;
+  text-decoration: none;
+  padding: 0 0.75rem;
+  border-left: 0.5rem solid;
+  border-left-color: transparent;
+  border-right: 0.5rem solid transparent;
+  transition: border-left-color 0.3s;
+}
+
+.nav__link:hover {
+  opacity: 0.8;
+  border-left-color: yellow;
+}
