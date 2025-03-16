@@ -1,6 +1,12 @@
 .nav {
+  height: 10vh;
+  background-image: url(../images/header_bg.png);
   display: flex;
   justify-content: space-between;
+}
+
+.nav_dark {
+  background-image: url(../images/header_bg_dark.png);
 }
 
 .nav_dark > .nav__list > .nav__item > a {

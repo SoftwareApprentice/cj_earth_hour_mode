@@ -1,23 +1,5 @@
 .header {
+  height: 90vh;
   max-width: 1440px;
-  background-image: url(../images/header_bg.png);
   margin: auto;
 }
-
-/* .header > h1 > a {
-  color: #000;
-  text-decoration: none;
-} */
-
-.header_dark {
-  background-image: url(../images/header_bg_dark.png);
-}
-
-/* .header_dark > h1 > a {
-  color: #fff;
-  text-decoration: none;
-} */
-
-/* .header__title {
-  margin: 0;
-} */
