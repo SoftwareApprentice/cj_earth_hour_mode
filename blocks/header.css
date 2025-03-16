@@ -14,8 +14,8 @@
   width: 10%;
   height: 1%;
   background-color: #fdfd1f;
-  color: black;
-  border: 1px solid #212121;
+  color: #4b4b4d;
+  border: 1px solid rgba(33, 33, 33, 0.8);
   border-radius: 30px;
   padding: 20px 10px;
   margin-top: 15%;
