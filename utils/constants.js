@@ -1,33 +1,39 @@
 export const cards = [
     {
-        src: "../images/lightbulb.png",
+        src: "../images/icons/switchIcon.jpg",
         alt: "Lightbulb",
         title: "Turn Off Lights",
         text: "Turn Off Lights When You Leave"
     },
     {
-        src: "../images/plug.png",
+        src: "../images/icons/plug.png",
         alt: "Plug",
         title: "Unplug Unused Devices",
         text: "Unplug Unused Devices When Not in Use"
     },
     {
-        src: "../images/lightbulb.png",
+        src: "../images/icons/laundryIcon.png",
         alt: "Shower",
-        title: "Take Shorter Showers",
-        text: "Take Shorter Showers to Save Water"
+        title: "Wash With Cold Water",
+        text: "Use cold water when doing laundry"
     },
     {
-        src: "../images/plug.png",
+        src: "../images/icons/solarIcon.png",
         alt: "Water",
-        title: "Use Less Water",
+        title: "Switch to Solar Power",
         text: "Use Less Water When Brushing Teeth"
     },
     {
-        src: "../images/lightbulb.png",
+        src: "../images/icons/thermoIcon.png",
         alt: "Recycle",
-        title: "Recycle More",
-        text: "Recycle More to Reduce Waste"
+        title: "Keep Thermostate Low",
+        text: "Keep thermostate low"
+    },
+    {
+        src: "../images/icons/ledIcon.png",
+        alt: "Recycle",
+        title: "Switch to LED Lights",
+        text: "LED Lights consume less energy"
     },
 ];
 
