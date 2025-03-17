@@ -3,18 +3,47 @@ import Section from "../components/Section.js";
 import Card from "../components/Card.js";
 import Pledge from "../components/Pledge.js";
 
+const popup = document.querySelector(constants.popupCardInfoSelectors.popup);
+const handleEscapeClose = (evt) => {
+    if (evt.key === "Escape") {
+        const openPopup = document.querySelector(".popup.popup_visible");
+        if (openPopup) {
+            popup.classList.remove("popup_visible");
+            document.activeElement.blur();
+        }
+    }
+};
+
+const handleMouseClickClose = (evt) => {
+    const openPopup = document.querySelector(".popup.popup_visible");
+    if (openPopup && evt.target === openPopup.children[0]) {
+        popup.classList.remove("popup_visible");
+    }
+};
+
+const addPopupListeners = () => {
+    document.addEventListener("keydown", handleEscapeClose);
+    document.addEventListener("click", handleMouseClickClose);
+};
+
+const removePopupListeners = () => {
+    document.removeEventListener("keydown", handleEscapeClose);
+    document.removeEventListener("click", handleMouseClickClose);
+};
+
 const cardList = new Section({
     items: constants.cards,
     renderer: (item) => {
         const card = new Card(item, constants.cardSelectors, {
             popupRenderer: (data) => {
-                const popup = document.querySelector(constants.popupCardInfoSelectors.popup);
                 popup.classList.add("popup_visible");
+                addPopupListeners();
                 popup.querySelector(constants.popupCardInfoSelectors.popupImage).src = data.img;
                 popup.querySelector(constants.popupCardInfoSelectors.popupTitle).textContent = data.title;
                 popup.querySelector(constants.popupCardInfoSelectors.popupText).textContent = data.text;
                 popup.querySelector(constants.popupCardInfoSelectors.popupCloseButton).addEventListener("click", () => {
                     popup.classList.remove("popup_visible");
+                    removePopupListeners();
                 });
             },
         });

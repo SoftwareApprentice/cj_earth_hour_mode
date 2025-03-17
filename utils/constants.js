@@ -71,7 +71,6 @@ export const pledgeOptions = [
     "Switch To LED Lights",
 ];
 
-export const pledges = JSON.parse(localStorage.getItem("pledges") || "[]");
 export const cardSelectors = {
   cardList: ".cards",
   cardTemplate: "#card-template",
