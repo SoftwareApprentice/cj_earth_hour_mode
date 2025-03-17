@@ -44,3 +44,39 @@
   opacity: 0.8;
   border-left-color: yellow;
 }
+
+.nav__icon {
+  display: none;
+}
+
+@media screen and (max-width: 627px) {
+  .nav__icon {
+    display: block;
+    position: absolute;
+    margin: 35px 25px 0 0;
+    right: 0;
+    top: 0;
+  }
+
+  .nav__list li:not(:last-child) {
+    display: none;
+  }
+
+  .nav__logo_hidden {
+    display: none;
+  }
+
+  .nav_opened {
+    height: 30vh;
+  }
+
+  .nav__list_opened {
+    margin: 40px auto 0;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .nav__list_opened li:not(:last-child) {
+    display: block;
+  }
+}

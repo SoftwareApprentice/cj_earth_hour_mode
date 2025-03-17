@@ -52,7 +52,6 @@ const initialPledges = [
   },
 ];
 
-
 //Load pledges from local storage, if there are no pledges create an empty array
 const pledges = JSON.parse(localStorage.getItem("pledges") || "[]");
 
@@ -134,9 +133,20 @@ function loadPledges() {
   }
 }
 
-function deletePledges(evt){
+function deletePledges(evt) {
   //Debugging tool to remove all pledges on wall
-  console.log("deleting pledges...")
+  console.log("deleting pledges...");
   localStorage.removeItem("pledges");
   window.location.reload();
+}
+
+//nav bar elements
+const navBar = document.querySelector("#nav-bar"); //.nav_opened
+const navLogo = navBar.querySelector(".nav__logo"); //.nav__logo_hidden
+const navList = navBar.querySelector(".nav__list"); //.nav__list_opened  .nav__list_opened li:not(:last-child)
+
+function myFunction() {
+  navBar.classList.toggle("nav_opened");
+  navLogo.classList.toggle("nav__logo_hidden");
+  navList.classList.toggle("nav__list_opened");
 }

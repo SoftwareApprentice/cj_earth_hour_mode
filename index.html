@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Earth Hour Mode</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <nav class="nav nav_dark">
+        <nav id="nav-bar" class="nav nav_dark">
           <img
             src="./images/Logo.png"
             alt="Earth Hour Logo"
@@ -27,6 +31,11 @@
             </li>
             <li class="nav__item">
               <a href="#contacts" class="nav__link">Contacts</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__icon" onclick="myFunction()"
+                ><i style="font-size: 25px" class="fa fa-bars"></i
+              ></a>
             </li>
           </ul>
         </nav>
