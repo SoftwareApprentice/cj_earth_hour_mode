@@ -26,8 +26,8 @@ export const cards = [
     {
         src: "../images/icons/thermoIcon.png",
         alt: "Recycle",
-        title: "Keep Thermostate Low",
-        text: "Keep thermostate low"
+        title: "Keep Thermostat Low",
+        text: "Keep thermostat low"
     },
     {
         src: "../images/icons/ledIcon.png",
