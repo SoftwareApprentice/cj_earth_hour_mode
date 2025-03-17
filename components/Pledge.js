@@ -11,7 +11,7 @@ export default class Pledge {
 
     getPledge() {
         this._getElement();
-        this._pledgeText.textContent = `${this._data.name} pledged to reduce their carbon footprint by ${this._data.text}!`
+        this._pledgeText.textContent = `${this._data.name} pledged to reduce their carbon footprint by ${this._data.pledge}!`
         return this._pledgeElement;
     }
 }

@@ -35,30 +35,8 @@ document.querySelector(constants.pledgeSelectors.pledgeForm).addEventListener("s
   pledgeList.addItem(addPledge());
 });
 
-document.querySelector(constants.pledgeSelectors.pledgeDeleteButton).addEventListener("click", deletePledges);
-
-
 function addPledge() {
   const name = document.querySelector(constants.pledgeSelectors.pledgeInputName).value;
   const pledge = document.querySelector(constants.pledgeSelectors.pledgeInputText).value;
   return { name, pledge };
-}
-
-function deletePledges() {
-  document.querySelectorAll(constants.pledgeSelectors.pledgeItem).forEach((pledge) => {
-      if (pledge.querySelector(constants.pledgeSelectors.pledgeCheckbox).checked) {
-          pledge.remove();
-      }
-  });
-}
-
-//nav bar elements
-const navBar = document.querySelector("#nav-bar"); //.nav_opened
-const navLogo = navBar.querySelector(".nav__logo"); //.nav__logo_hidden
-const navList = navBar.querySelector(".nav__list"); //.nav__list_opened  .nav__list_opened li:not(:last-child)
-
-function myFunction() {
-  navBar.classList.toggle("nav_opened");
-  navLogo.classList.toggle("nav__logo_hidden");
-  navList.classList.toggle("nav__list_opened");
 }
