@@ -1,38 +1,78 @@
-.pledgeWall{
+.pledgeWall {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 0px 24px;
+    padding: 15px 50px;
 }
-.pledge__title{
+
+.pledge__title {
     font-size: 24px;
 }
 
-.pledge__form{
+.pledge__form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     font-size: 18px;
-    padding: 0px;
     margin: 0;
+    gap: 8px;
 }
-.pledge__submit-btn{
-    border-radius: 8px;
-    border: 1px solid black;
+
+.pledge__submit-btn {
+    margin-left: auto;
+    min-width: fit-content;
+    min-height: fit-content;
+    background-color: #fdfd1f;
+    color: #4b4b4d;
+    border: 1px solid rgba(33, 33, 33, 0.8);
+    border-radius: 30px;
+    padding: 15px 40px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s, background-color 0.3s;
 }
-.pledge__submit-btn:hover{
-    background-color: #ADCACB;
+
+.pledge__submit-btn:hover {
+    background-color: #5e5e5e99;
+    color: #fdfd1f;
 }
-.pledges{
+
+.pledges {
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 12px;
+    padding: 0;
 }
 
-.pledge{
+.pledge {
+    display: flex;
     border: 1px solid black;
     border-radius: 8px;
-    background-color: #87C159;
+    background-color: #fdfd1f;
     padding: 12px;
-    font-size: 18px;
+    font-size: 24px;
+}
+
+.pledge__checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #181818;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 12px;
+    justify-self: end;
+}
+
+.pledge__checkbox:checked {
+    border: none;
+    background-size: contain;
+    background-image: url(../images/icons/check-mark.svg);
 }

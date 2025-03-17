@@ -44,34 +44,61 @@
         </div>
       </header>
       <main class="content">
-        <ul class="cards"></ul>
+        <ul class="cards">
+          <template id="card-template">
+            <li class="card">
+              <button class="card__info" type="button">
+                <img class="card__image" />
+              </button>
+              <h2 class="card__title"></h2>
+            </li>
+          </template>
+        </ul>
         <section class="pledgeWall" id="pledge-wall">
           <h2 class="pledge__title">How Will You Contribute?</h2>
           <form class="pledge__form">
-            I,
-            <input
-              type="text"
-              class="pledge__name"
-              placeholder="Name"
-              maxlength="35"
-              required
-            />
-            pledge to reduce my carbon footprint by
-            <select name="pledges" id="pledges">
-              <option value="unplugging unused devices">
-                unplugging unused devices
-              </option>
-              <option value="switching to paper products from plastic">
-                switching to paper products from plastic
-              </option>
-              <option value="washing laundry at a colder temperature">
-                washing laundry at a colder temperature
-              </option>
-            </select>
+            <p>
+              I,
+              <label for="pledge-name">
+                <input
+                  type="text"
+                  id="pledge-name"
+                  class="pledge__name"
+                  placeholder="Your Name"
+                  required
+                /> </label
+              >, pledge to reduce my carbon footprint by
+            </p>
+
+            <label for="pledge-text" class="pledge__label">
+              <select name="pledges" id="pledge-text" class="pledge__select">
+                <option value="unplugging unused devices">
+                  Unplugging unused devices
+                </option>
+                <option value="switching to paper products from plastic">
+                  Switching to paper products from plastic
+                </option>
+                <option value="washing laundry at a colder temperature">
+                  Washing laundry at a colder temperature
+                </option>
+              </select>
+            </label>
+
             <button type="submit" class="pledge__submit-btn">Pledge</button>
           </form>
-          <ul class="pledges"></ul>
-          <button class="pledge__delete-btn">Delete Pledges</button>
+          <form class="pledge-list__form">
+            <ul class="pledges">
+              <template id="pledge-template">
+                <li class="pledge">
+                  <label class="pledge__label">
+                    <input type="checkbox" class="pledge__checkbox" />
+                    <span class="pledge__text"></span>
+                  </label>
+                </li>
+              </template>
+            </ul>
+            <button class="pledge__delete-btn">Delete Selected Pledges</button>
+          </form>
         </section>
         <section class="about" id="about">
           <img
@@ -97,7 +124,24 @@
       <footer class="footer" id="contacts">
         <p class="footer__copyright">&copy;2025 S.P.A.M</p>
       </footer>
+      <div class="popup" id="card-info-popup">
+        <div class="popup__overlay">
+          <div class="popup__container">
+            <h2 class="popup__title">
+              <!-- This text will be dynamically added -->
+            </h2>
+            <p class="popup__text">
+              <!-- This text will be dynamically added -->
+            </p>
+          </div>
+          <button
+            type="button"
+            class="popup__close popup__close-button"
+            id="card-info-close"
+          ></button>
+        </div>
+      </div>
     </div>
-    <script src="scripts/index.js"></script>
+    <script type="module" src="./scripts/index.js" ></script>
   </body>
 </html>
