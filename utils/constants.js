@@ -3,37 +3,43 @@ export const cards = [
         src: "../images/icons/switchIcon.jpg",
         alt: "Lightbulb",
         title: "Turn Off Lights",
-        text: "Turn Off Lights When You Leave"
+        text: "Turn Off Lights When You Leave",
+        img: "../images/lightswitch.png"
     },
     {
         src: "../images/icons/plug.png",
         alt: "Plug",
         title: "Unplug Unused Devices",
-        text: "Unplug Unused Devices When Not in Use"
+        text: "Unplug Unused Devices When Not in Use",
+        img: "../images/unplug.png"
     },
     {
         src: "../images/icons/laundryIcon.png",
         alt: "Shower",
         title: "Wash With Cold Water",
-        text: "Use cold water when doing laundry"
+        text: "Use cold water when doing laundry",
+        img: "../images/laundry.png"
     },
     {
         src: "../images/icons/solarIcon.png",
         alt: "Water",
         title: "Switch to Solar Power",
-        text: "Use Less Water When Brushing Teeth"
+        text: "Use Less Water When Brushing Teeth",
+        img: "../images/solar.png"
     },
     {
         src: "../images/icons/thermoIcon.png",
         alt: "Recycle",
         title: "Keep Thermostat Low",
-        text: "Keep thermostat low"
+        text: "Keep thermostat low",
+        img: "../images/thermostat.png"
     },
     {
         src: "../images/icons/ledIcon.png",
         alt: "Recycle",
         title: "Switch to LED Lights",
-        text: "LED Lights consume less energy"
+        text: "LED Lights consume less energy",
+        img: "../images/led.png"
     },
 ];
 
@@ -67,6 +73,7 @@ export const cardSelectors = {
 
 export const popupCardInfoSelectors = {
     popup: "#card-info-popup",
+    popupImage: ".popup__image",
     popupTitle: ".popup__title",
     popupText: ".popup__text",
     popupCloseButton: ".popup__close-button"
@@ -83,4 +90,15 @@ export const pledgeSelectors = {
     pledgesForm: ".pledge-list__form",
     pledgeCheckbox: ".pledge__checkbox",
     pledgeDeleteButton: ".pledge__delete-btn"
+};
+
+export const navBarSelectors = {
+    navBar: document
+        .querySelector("#nav-bar"),
+    navLogo: document
+        .querySelector(".nav__logo"),
+    navList: document
+        .querySelector(".nav__list"),
+    navIcon: document
+        .querySelector(".nav__icon")
 };

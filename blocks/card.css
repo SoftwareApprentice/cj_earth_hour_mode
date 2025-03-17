@@ -17,19 +17,19 @@
 }
 
 .card:hover {
-    background-color: rgb(247, 247, 188);
+    background-color: #fdfd1f;
 }
 
 .card__info {
     width: 100%;
     border: none;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
     padding: 10px;
+    cursor: pointer;
 }
 
 .card__image {
     width: 100%;
-    border-radius: 8px 8px 0 0;
 }
 
 .card__title {
