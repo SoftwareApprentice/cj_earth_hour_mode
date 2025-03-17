@@ -14,20 +14,29 @@
   max-width: 300px;
   border: 1px solid black;
   border-radius: 8px;
-  background-color: transparent;
+  transition: background-color 0.3s ease;
+
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 .card:hover {
   background-color: rgb(247, 247, 188);
 }
 .card__image {
   width: 100%;
+
+  margin: 0 auto 15px;
   border-radius: 8px 8px 0 0;
   object-fit: contain;
 }
 
 .card__title {
   padding: 10px;
-  font-size: 1.2em;
+  font-size: 24px;
   font-weight: bold;
   color: black;
   text-align: center;

@@ -9,14 +9,45 @@
   <body>
     <div class="page">
       <header class="header">
+        <img
+          src="./images/logo.png"
+          alt="Earth Hour Logo"
+          class="header__logo"
+        />
         <h1 class="header__title">
           <!-- change the href to target section -->
           <a href="#cards">Earth Hour Mode</a>
         </h1>
+
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li>
+              <a href="#home" class="header__menu-link">Home</a>
+            </li>
+            <li>
+              <a href="#windmill" class="header__menu-link">Windmill</a>
+            </li>
+            <li>
+              <a href="#cards" class="header__menu-link">Cards</a>
+            </li>
+            <li>
+              <a href="#pledgeWall" class="header__menu-link">Pledge Wall</a>
+            </li>
+          </ul>
+        </nav>
       </header>
+
+      <section class="windmill" id="windmill">
+        <!-- This will be your image section -->
+      </section>
+
+      <section class="cards" id="cards">
+        <!-- your existing cards -->
+      </section>
+
       <main>
         <ul class="cards"></ul>
-        <section class="pledgeWall">
+        <section class="pledgeWall" id="pledgeWall">
           <h2>How Will You Contribute?</h2>
           <form class="pledge__form">
             I,
