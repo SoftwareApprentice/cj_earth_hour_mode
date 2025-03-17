@@ -1,0 +1,38 @@
+.pledgeWall{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 24px;
+}
+.pledge__title{
+    font-size: 24px;
+}
+
+.pledge__form{
+    font-size: 18px;
+    padding: 0px;
+    margin: 0;
+}
+.pledge__submit-btn{
+    border-radius: 8px;
+    border: 1px solid black;
+}
+.pledge__submit-btn:hover{
+    background-color: #ADCACB;
+}
+.pledges{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.pledge{
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #87C159;
+    padding: 12px;
+    font-size: 18px;
+}

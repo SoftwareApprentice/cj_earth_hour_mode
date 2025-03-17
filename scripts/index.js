@@ -108,6 +108,7 @@ function addPledge(evt) {
   const pledgeWall = document.querySelector(".pledges");
   const pledgeEl = document.createElement("li");
   pledgeEl.textContent = `${name} pledged to reduce their carbon footprint by ${pledge}!`;
+  pledgeEl.classList.add("pledge");
   pledgeWall.append(pledgeEl);
 
   //Push pledge onto local storage JSON.
@@ -126,6 +127,7 @@ function loadPledges() {
       const name = pledge.name;
       const text = pledge.pledge;
       const pledgeEl = document.createElement("li");
+      pledgeEl.classList.add("pledge");
       const pledgeWall = document.querySelector(".pledges");
       pledgeEl.textContent = `${name} pledged to reduce their carbon footprint by ${text}!`;
       pledgeWall.append(pledgeEl);
