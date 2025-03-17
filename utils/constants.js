@@ -17,21 +17,21 @@ export const cards = [
     src: "../images/icons/laundryIcon.png",
     alt: "Shower",
     title: "Wash With Cold Water",
-    text: "Gentler on fabrics",
+    text: "Helps Garments Last Longer",
     img: "../images/laundry.png",
   },
   {
     src: "../images/icons/solarIcon.png",
     alt: "Water",
     title: "Switch to Solar Power",
-    text: "Use Less Water When Brushing Teeth",
+    text: "Decreases Electricity Demand From The Grid",
     img: "../images/solar.png",
   },
   {
     src: "../images/icons/thermoIcon.png",
     alt: "Recycle",
     title: "Keep Thermostat Low",
-    text: "Keep thermostat low",
+    text: "Leads To Lower Heating Costs",
     img: "../images/thermostat.png",
   },
   {
@@ -46,19 +46,19 @@ export const cards = [
 export const initialPledges = [
   {
     name: "Modesto",
-    pledge: "washing laundry at a colder temperature",
+    pledge: "Wash With Cold Water",
   },
   {
     name: "Aaron",
-    pledge: "switching to paper products from plastic",
+    pledge: "Unplug Unused Devices",
   },
   {
     name: "Stephanie",
-    pledge: "unplugging unused devices",
+    pledge: "Switch To Solar Power",
   },
   {
     name: "Pasha",
-    pledge: "washing laundry at a colder temperature",
+    pledge: "Keep Thermostat Low",
   },
 ];
 

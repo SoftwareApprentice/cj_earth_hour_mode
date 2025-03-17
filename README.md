@@ -17,9 +17,3 @@ Earth Hour Mode is an eco-friendly platform dedicated to energy conservation. He
 This website is deployed to GitHub Pages
 
 - https://softwareapprentice.github.io/cj_earth_hour_mode/
-
-## Project Images
-
-![Screenshot of 1440 view port]()
-
-![Screenshot of 320 viewport]()
