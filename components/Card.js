@@ -22,7 +22,7 @@ export default class Card {
         this._getElement();
         this._cardImage.src = this._data.src;
         this._cardImage.alt = this._data.alt;
-        this._cardTitle.textContent = this._data.header;
+        this._cardTitle.textContent = this._data.title;
         this._setEventListeners();
         return this._cardElement;
     }
