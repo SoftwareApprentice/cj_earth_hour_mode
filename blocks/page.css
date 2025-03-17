@@ -1,10 +1,10 @@
 .page {
-  background-color: #f1f1f1;
+  background: linear-gradient(#faf2e4, #f1f1f1);
   min-width: 320px;
   min-height: 100vh;
   box-sizing: border-box;
   overflow-x: hidden;
-  font-family: 'Poppins', serif;
+  font-family: "Poppins", serif;
 }
 
 body {
