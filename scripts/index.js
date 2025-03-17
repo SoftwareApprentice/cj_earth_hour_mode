@@ -3,69 +3,56 @@ import Section from "../components/Section.js";
 import Card from "../components/Card.js";
 import Pledge from "../components/Pledge.js";
 
-const cardList = new Section(
-  {
+const cardList = new Section({
     items: constants.cards,
-    renderer: (item) =>
-      new Card(item, constants.cardSelectors, {
-        popupRenderer: (data) => {
-          const popup = document.querySelector(
-            constants.popupCardInfoSelectors.popup
-          );
-          popup.classList.add("popup_visible");
-          popup.querySelector(
-            constants.popupCardInfoSelectors.popupTitle
-          ).textContent = data.title;
-          popup.querySelector(
-            constants.popupCardInfoSelectors.popupText
-          ).textContent = data.text;
-          popup
-            .querySelector(constants.popupCardInfoSelectors.popupCloseButton)
-            .addEventListener("click", () => {
-              popup.classList.remove("popup_visible");
-            });
-        },
-      }).getCard(),
-  },
-  constants.cardSelectors.cardList
-);
+    renderer: (item) => {
+        const card = new Card(item, constants.cardSelectors, {
+            popupRenderer: (data) => {
+                const popup = document.querySelector(constants.popupCardInfoSelectors.popup);
+                popup.classList.add("popup_visible");
+                popup.querySelector(constants.popupCardInfoSelectors.popupImage).src = data.img;
+                popup.querySelector(constants.popupCardInfoSelectors.popupTitle).textContent = data.title;
+                popup.querySelector(constants.popupCardInfoSelectors.popupText).textContent = data.text;
+                popup.querySelector(constants.popupCardInfoSelectors.popupCloseButton).addEventListener("click", () => {
+                    popup.classList.remove("popup_visible");
+                });
+            },
+        });
+        return card.getCard();
+    },
+}, constants.cardSelectors.cardList);
 cardList.renderItems();
 
-const pledgeList = new Section(
-  {
+(function fillPledgeOptions() {
+    constants.pledgeOptions.forEach((option) => {
+        const selectOption = document.createElement("option");
+        selectOption.value = option.toLowerCase();
+        selectOption.textContent = option;
+        document.querySelector(constants.pledgeSelectors.pledgeSelect).appendChild(selectOption);
+    });
+})();
+
+const pledgeList = new Section({
     items: constants.initialPledges,
     renderer: (item) => new Pledge(item, constants.pledgeSelectors).getPledge(),
-  },
-  constants.pledgeSelectors.pledgeList
-);
+}, constants.pledgeSelectors.pledgeList);
 pledgeList.renderItems();
 
-document
-  .querySelector(constants.pledgeSelectors.pledgeForm)
-  .addEventListener("submit", () => {
+document.querySelector(constants.pledgeSelectors.pledgeForm).addEventListener("submit", (evt) => {
+    evt.preventDefault();
     pledgeList.addItem(addPledge());
-  });
+    evt.target.reset();
+});
 
 function addPledge() {
-  const name = document.querySelector(
-    constants.pledgeSelectors.pledgeInputName
-  ).value;
-  const pledge = document.querySelector(
-    constants.pledgeSelectors.pledgeInputText
-  ).value;
-  return { name, pledge };
+    return {
+        name: document.querySelector(constants.pledgeSelectors.pledgeInputName).value,
+        pledge: document.querySelector(constants.pledgeSelectors.pledgeInputText).value,
+    };
 }
 
-//nav bar elements
-const navBar = document.querySelector("#nav-bar"); //.nav_opened
-const navLogo = navBar.querySelector(".nav__logo"); //.nav__logo_hidden
-const navList = navBar.querySelector(".nav__list"); //.nav__list_opened  .nav__list_opened li:not(:last-child)
-
-function myFunction() {
-  navBar.classList.toggle("nav_opened");
-  navLogo.classList.toggle("nav__logo_hidden");
-  navList.classList.toggle("nav__list_opened");
-}
-
-const navIcon = document.querySelector(".nav__icon");
-navIcon.addEventListener("click", myFunction);
+constants.navBarSelectors.navIcon.addEventListener("click", () => {
+    constants.navBarSelectors.navBar.classList.toggle("nav_opened");
+    constants.navBarSelectors.navLogo.classList.toggle("nav__logo_hidden");
+    constants.navBarSelectors.navList.classList.toggle("nav__list_opened");
+});
