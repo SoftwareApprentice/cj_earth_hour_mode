@@ -20,6 +20,7 @@
 }
 .pledge__submit-btn:hover{
     background-color: #ADCACB;
+    cursor: pointer;
 }
 .pledges{
     list-style: none;
