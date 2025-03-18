@@ -8,10 +8,10 @@ export const cards = [
       "Saves energy, reducing electricity bills",
       "Promote sustainability by conserving resources",
     ],
-    img: "../images/lightswitch.png",
+    img: "images/lightswitch.png",
   },
   {
-    src: "../images/icons/plug.png",
+    src: "images/icons/plug.png",
     alt: "Plug",
     title: "Unplug Unused Devices",
     text: [
@@ -19,10 +19,10 @@ export const cards = [
       "Saves money on electicity bills",
       "Extends the lifespan of devices",
     ],
-    img: "../images/unplug.png",
+    img: "images/unplug.png",
   },
   {
-    src: "../images/icons/laundryIcon.png",
+    src: "images/icons/laundryIcon.png",
     alt: "Laundry",
     title: "Wash With Cold Water",
     text: [
@@ -30,10 +30,10 @@ export const cards = [
       "Reduces need to heat water",
       "Prevents fabrics from shinking and fading",
     ],
-    img: "../images/laundry.png",
+    img: "images/laundry.png",
   },
   {
-    src: "../images/icons/solarIcon.png",
+    src: "images/icons/solarIcon.png",
     alt: "Solar",
     title: "Switch To Solar Power",
     text: [
@@ -41,10 +41,10 @@ export const cards = [
       "Reduces reliance on non-rewable energy sources",
       "Harnesses free energy from the sun",
     ],
-    img: "../images/solar.png",
+    img: "images/solar.png",
   },
   {
-    src: "../images/icons/thermoIcon.png",
+    src: "images/icons/thermoIcon.png",
     alt: "Thermostat",
     title: "Keep Thermostat Low",
     text: [
@@ -52,10 +52,10 @@ export const cards = [
       "Leads to lower heating costs",
       "Decreases the strain on heating systems",
     ],
-    img: "../images/thermostat.png",
+    img: "images/thermostat.png",
   },
   {
-    src: "../images/icons/ledIcon.png",
+    src: "images/icons/ledIcon.png",
     alt: "LED",
     title: "Switch To LED Lights",
     text: [
@@ -63,7 +63,7 @@ export const cards = [
       "Use up to 80% less electricity",
       "Last longer than traditional light bulbs",
     ],
-    img: "../images/led.png",
+    img: "images/led.png",
   },
 ];
 
