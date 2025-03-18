@@ -8,7 +8,7 @@ export const cards = [
       "Saves energy, reducing electricity bills",
       "Promote sustainability by conserving resources",
     ],
-    img: "./images/lightswitch.png",
+    img: "./images/Lightswitch.png",
   },
   {
     src: "./images/icons/plug.png",
@@ -19,7 +19,7 @@ export const cards = [
       "Saves money on electicity bills",
       "Extends the lifespan of devices",
     ],
-    img: "./images/unplug.png",
+    img: "./images/Unplug.png",
   },
   {
     src: "./images/icons/laundryIcon.jpg",
@@ -30,7 +30,7 @@ export const cards = [
       "Reduces need to heat water",
       "Prevents fabrics from shinking and fading",
     ],
-    img: "./images/laundry.png",
+    img: "./images/Laundry.png",
   },
   {
     src: "./images/icons/solarIcon.png",
@@ -41,7 +41,7 @@ export const cards = [
       "Reduces reliance on non-rewable energy sources",
       "Harnesses free energy from the sun",
     ],
-    img: "./images/solar.png",
+    img: "./images/Solar.png",
   },
   {
     src: "./images/icons/thermoIcon.png",
@@ -52,7 +52,7 @@ export const cards = [
       "Leads to lower heating costs",
       "Decreases the strain on heating systems",
     ],
-    img: "./images/thermostat.png",
+    img: "./images/Thermostat.png",
   },
   {
     src: "./images/icons/ledIcon.png",
@@ -63,7 +63,7 @@ export const cards = [
       "Use up to 80% less electricity",
       "Last longer than traditional light bulbs",
     ],
-    img: "./images/led.png",
+    img: "./images/Led.png",
   },
 ];
 
