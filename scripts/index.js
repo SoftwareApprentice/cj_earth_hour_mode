@@ -43,11 +43,13 @@ const cardList = new Section({
                 addPopupListeners();
                 popup.querySelector(constants.popupCardInfoSelectors.popupImage).src = data.img;
                 popup.querySelector(constants.popupCardInfoSelectors.popupTitle).textContent = data.title;
-                console.log(data.text);
+                popup.querySelector(constants.popupCardInfoSelectors.popupLink).href = data.link;
+                popup.querySelector(constants.popupCardInfoSelectors.popupLink).textContent = data.article;
                 data.text.forEach((item)=>{
-                    console.log(item)
+                    console.log(item);
                     const popup__item = document.createElement("li");
                     popup__item.textContent = item;
+                    popup__item.classList.add("popup__text");
                     popup__list.append(popup__item);
                 });
                 //popup.querySelector(constants.popupCardInfoSelectors.popupText).textContent = data.text;

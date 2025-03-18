@@ -8,6 +8,8 @@ export const cards = [
       "Saves energy, reducing electricity bills",
       "Promote sustainability by conserving resources",
     ],
+    link: "https://www.energysage.com/electricity/house-watts/how-many-watts-does-a-light-bulb-use/",
+    article: "How many watts does a light bulb use?",
     img: "./images/Lightswitch.png",
   },
   {
@@ -19,6 +21,8 @@ export const cards = [
       "Saves money on electicity bills",
       "Extends the lifespan of devices",
     ],
+    link: "https://github.com/SoftwareApprentice/cj_earth_hour_mode",
+    article: "Name of Article",
     img: "./images/Unplug.png",
   },
   {
@@ -30,6 +34,8 @@ export const cards = [
       "Reduces need to heat water",
       "Prevents fabrics from shinking and fading",
     ],
+    link: "https://github.com/SoftwareApprentice/cj_earth_hour_mode",
+    article: "Name of Article",
     img: "./images/Laundry.png",
   },
   {
@@ -41,6 +47,8 @@ export const cards = [
       "Reduces reliance on non-rewable energy sources",
       "Harnesses free energy from the sun",
     ],
+    link: "https://github.com/SoftwareApprentice/cj_earth_hour_mode",
+    article: "Name of Article",
     img: "./images/Solar.png",
   },
   {
@@ -52,6 +60,8 @@ export const cards = [
       "Leads to lower heating costs",
       "Decreases the strain on heating systems",
     ],
+    link: "https://github.com/SoftwareApprentice/cj_earth_hour_mode",
+    article: "Name of Article",
     img: "./images/Thermostat.png",
   },
   {
@@ -63,6 +73,8 @@ export const cards = [
       "Use up to 80% less electricity",
       "Last longer than traditional light bulbs",
     ],
+    link: "https://github.com/SoftwareApprentice/cj_earth_hour_mode",
+    article: "Name of Article",
     img: "./images/Bulb.png",
   },
 ];
@@ -109,6 +121,7 @@ export const popupCardInfoSelectors = {
   popupTitle: ".popup__title",
   popupText: ".popup__text",
   popupCloseButton: ".popup__close-button",
+  popupLink: ".popup__link"
 };
 
 export const pledgeSelectors = {
