@@ -3,42 +3,42 @@ export const cards = [
     src: "../images/icons/switchIcon.jpg",
     alt: "Lightbulb",
     title: "Turn Off Lights",
-    text: "Extends The Lifespan Of The Bulbs",
+    text: ["Extends The Lifespan Of The Bulbs", "second", "third"],
     img: "../images/lightswitch.png",
   },
   {
     src: "../images/icons/plug.png",
     alt: "Plug",
     title: "Unplug Unused Devices",
-    text: "Prevents Phantom Energy Drain",
+    text: ["Prevents Phantom Energy Drain"],
     img: "../images/unplug.png",
   },
   {
     src: "../images/icons/laundryIcon.png",
     alt: "Shower",
     title: "Wash With Cold Water",
-    text: "Helps Garments Last Longer",
+    text: ["Helps Garments Last Longer"],
     img: "../images/laundry.png",
   },
   {
     src: "../images/icons/solarIcon.png",
     alt: "Water",
     title: "Switch to Solar Power",
-    text: "Decreases Electricity Demand From The Grid",
+    text: ["Decreases Electricity Demand From The Grid"],
     img: "../images/solar.png",
   },
   {
     src: "../images/icons/thermoIcon.png",
     alt: "Recycle",
     title: "Keep Thermostat Low",
-    text: "Leads To Lower Heating Costs",
+    text: ["Leads To Lower Heating Costs"],
     img: "../images/thermostat.png",
   },
   {
     src: "../images/icons/ledIcon.png",
     alt: "Recycle",
     title: "Switch to LED Lights",
-    text: "Use up to 80% less electricity",
+    text: ["Use up to 80% less electricity"],
     img: "../images/led.png",
   },
 ];
@@ -63,12 +63,12 @@ export const initialPledges = [
 ];
 
 export const pledgeOptions = [
-  "Turning Off Lights",
-  "Unpluging Unused Devices",
-  "Washing With Cold Water",
-  "Switching To Solar Power",
-  "Keeping Thermostat Low",
-  "Switching To LED Lights",
+    "Turn Off Lights",
+    "Unplug Unused Devices",
+    "Wash With Cold Water",
+    "Switch To Solar Power",
+    "Keep Thermostat Low",
+    "Switch To LED Lights",
 ];
 
 export const cardSelectors = {
@@ -95,7 +95,7 @@ export const pledgeSelectors = {
   pledgeSelect: ".pledge__select",
   pledgeItem: ".pledge",
   pledgeTemplate: "#pledge-template",
-  pledgeText: ".pledge__text",
+  pledgeText: ".pledge__text"
 };
 
 export const navBarSelectors = {

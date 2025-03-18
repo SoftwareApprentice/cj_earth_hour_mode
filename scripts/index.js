@@ -4,11 +4,13 @@ import Card from "../components/Card.js";
 import Pledge from "../components/Pledge.js";
 
 const popup = document.querySelector(constants.popupCardInfoSelectors.popup);
+const popup__list = document.querySelector(".popup__list");
 const handleEscapeClose = (evt) => {
     if (evt.key === "Escape") {
         const openPopup = document.querySelector(".popup.popup_visible");
         if (openPopup) {
             popup.classList.remove("popup_visible");
+            popup__list.innerHTML = '';
             document.activeElement.blur();
         }
     }
@@ -17,6 +19,7 @@ const handleEscapeClose = (evt) => {
 const handleMouseClickClose = (evt) => {
     const openPopup = document.querySelector(".popup.popup_visible");
     if (openPopup && evt.target === openPopup.children[0]) {
+        popup__list.innerHTML = '';
         popup.classList.remove("popup_visible");
     }
 };
@@ -40,10 +43,20 @@ const cardList = new Section({
                 addPopupListeners();
                 popup.querySelector(constants.popupCardInfoSelectors.popupImage).src = data.img;
                 popup.querySelector(constants.popupCardInfoSelectors.popupTitle).textContent = data.title;
-                popup.querySelector(constants.popupCardInfoSelectors.popupText).textContent = data.text;
+                console.log(data.text);
+                data.text.forEach((item)=>{
+                    console.log(item)
+                    const popup__item = document.createElement("li");
+                    popup__item.textContent = item;
+                    popup__list.append(popup__item);
+                });
+                //popup.querySelector(constants.popupCardInfoSelectors.popupText).textContent = data.text;
                 popup.querySelector(constants.popupCardInfoSelectors.popupCloseButton).addEventListener("click", () => {
+                    popup__list.innerHTML = '';
                     popup.classList.remove("popup_visible");
                     removePopupListeners();
+                    console.log(popup__list);
+                    
                 });
             },
         });
