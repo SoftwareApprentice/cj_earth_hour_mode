@@ -8,7 +8,7 @@ export const cards = [
       "Saves energy, reducing electricity bills",
       "Promote sustainability by conserving resources",
     ],
-    img: "images/lightswitch.png",
+    img: "./images/lightswitch.png",
   },
   {
     src: "./images/icons/plug.png",
