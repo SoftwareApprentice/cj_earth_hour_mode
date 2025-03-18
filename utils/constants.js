@@ -22,7 +22,7 @@ export const cards = [
     img: "images/unplug.png",
   },
   {
-    src: "images/icons/laundryIcon.png",
+    src: "images/icons/laundryIcon.jpg",
     alt: "Laundry",
     title: "Wash With Cold Water",
     text: [
