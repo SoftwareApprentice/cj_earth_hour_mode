@@ -54,3 +54,14 @@
   color: white;
   border-radius: 4px;
 }
+
+
+@media (max-width: 627px) {
+  .header__title{
+    text-align: center;
+  }
+  .header__caption{
+    text-align: center;
+    margin: 0 12px;
+  }
+}
