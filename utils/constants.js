@@ -46,19 +46,19 @@ export const cards = [
 export const initialPledges = [
   {
     name: "Modesto",
-    pledge: "Wash With Cold Water",
+    pledge: "Washing With Cold Water",
   },
   {
     name: "Aaron",
-    pledge: "Unplug Unused Devices",
+    pledge: "Unpluging Unused Devices",
   },
   {
     name: "Stephanie",
-    pledge: "Switch To Solar Power",
+    pledge: "Switching To Solar Power",
   },
   {
     name: "Pasha",
-    pledge: "Keep Thermostat Low",
+    pledge: "Keeping Thermostat Low",
   },
 ];
 
