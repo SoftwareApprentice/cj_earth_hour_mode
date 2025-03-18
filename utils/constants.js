@@ -63,7 +63,7 @@ export const cards = [
       "Use up to 80% less electricity",
       "Last longer than traditional light bulbs",
     ],
-    img: "./images/LED.png",
+    img: "./images/Led.png",
   },
 ];
 
