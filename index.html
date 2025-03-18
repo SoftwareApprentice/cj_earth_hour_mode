@@ -21,13 +21,16 @@
           />
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#pledge-wall" class="nav__link">Contribute</a>
+              <a href="#cards" class="nav__link">Resources</a>
+            </li>
+            <li class="nav__item">
+              <a href="#pledge-wall" class="nav__link">Pledge</a>
             </li>
             <li class="nav__item">
               <a href="#about" class="nav__link">About</a>
             </li>
             <li class="nav__item">
-              <a href="#contacts" class="nav__link">Contacts</a>
+              <a href="#contacts" class="nav__link">Team</a>
             </li>
             <li class="nav__item">
               <a class="nav__icon"
@@ -43,7 +46,7 @@
         </div>
       </header>
       <main class="content">
-        <ul class="cards">
+        <ul class="cards" id="cards">
           <template id="card-template">
             <li class="card">
               <button class="card__info" type="button">
@@ -93,11 +96,11 @@
             class="about__logo"
           />
           <div class="about__content">
-            <h1 class="about__title">About Title</h1>
+            <h1 class="about__title">About Us</h1>
             <p class="about__paragraph">
               Our team is dedicated to crafting innovative digital solutions
               that inspire individuals to embrace sustainable living and make a
-              positive impact on the planet. By allowing users to submit pledges
+              positive impact on the planet. </p><br/> <p class="about__paragraph">Allowing users to submit pledges
               on how to contribute to Earth Hour, we empower users to adopt
               eco-friendly habits, conserve energy, and reduce their
               environmental footprint effortlessly. By combining creativity,
@@ -113,20 +116,22 @@
       <div class="popup" id="card-info-popup">
         <div class="popup__overlay">
           <div class="popup__container">
-            <div class="popup__header">
-              <img class="popup__image" />
-              <button
+            <button
                 type="button"
                 class="popup__close popup__close-button"
                 id="card-info-close"
               ></button>
-            </div>
+            <img class="popup__image" />
+            <div class="popup__header">
+        
+            
             <h2 class="popup__title">
               <!-- This text will be dynamically added -->
             </h2>
             <p class="popup__text">
               <!-- This text will be dynamically added -->
             </p>
+          </div>
           </div>
         </div>
       </div>
