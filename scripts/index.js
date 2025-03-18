@@ -46,7 +46,6 @@ const cardList = new Section({
                 popup.querySelector(constants.popupCardInfoSelectors.popupLink).href = data.link;
                 popup.querySelector(constants.popupCardInfoSelectors.popupLink).textContent = data.article;
                 data.text.forEach((item)=>{
-                    console.log(item);
                     const popup__item = document.createElement("li");
                     popup__item.textContent = item;
                     popup__item.classList.add("popup__text");
@@ -57,8 +56,6 @@ const cardList = new Section({
                     popup__list.innerHTML = '';
                     popup.classList.remove("popup_visible");
                     removePopupListeners();
-                    console.log(popup__list);
-                    
                 });
             },
         });
