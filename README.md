@@ -14,6 +14,8 @@ Earth Hour Mode is an eco-friendly platform dedicated to energy conservation. He
 
 ## Deployment
 
-This website is deployed to GitHub Pages
+- [Live site](https://softwareapprentice.github.io/cj_earth_hour_mode/)
 
-- https://softwareapprentice.github.io/cj_earth_hour_mode/
+- [Project brief on Figma](https://www.figma.com/design/I3YNKScvrvrJlQMrcrqcym/Earth-Hour?node-id=0-1&p=f&t=jRFSL5jij2fyjGWf-0)
+
+- [Link to 'Earth Hour Mode: Pledge Wall' project on GitHub](https://github.com/SoftwareApprentice/cj_earth_hour_mode)
