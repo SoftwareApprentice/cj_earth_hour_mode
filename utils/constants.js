@@ -1,6 +1,6 @@
 export const cards = [
   {
-    src: "images/icons/switchIcon.jpg",
+    src: "./images/icons/switchIcon.jpg",
     alt: "Lightbulb",
     title: "Turn Off Lights",
     text: [
@@ -8,10 +8,10 @@ export const cards = [
       "Saves energy, reducing electricity bills",
       "Promote sustainability by conserving resources",
     ],
-    img: "images/lightswitch.png",
+    img: "./images/lightswitch.png",
   },
   {
-    src: "images/icons/plug.png",
+    src: "./images/icons/plug.png",
     alt: "Plug",
     title: "Unplug Unused Devices",
     text: [
@@ -19,7 +19,7 @@ export const cards = [
       "Saves money on electicity bills",
       "Extends the lifespan of devices",
     ],
-    img: "images/unplug.png",
+    img: "./images/unplug.png",
   },
   {
     src: "images/icons/laundryIcon.jpg",
