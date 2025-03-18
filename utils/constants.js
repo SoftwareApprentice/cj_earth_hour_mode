@@ -63,12 +63,12 @@ export const initialPledges = [
 ];
 
 export const pledgeOptions = [
-    "Turn Off Lights",
-    "Unplug Unused Devices",
-    "Wash With Cold Water",
-    "Switch To Solar Power",
-    "Keep Thermostat Low",
-    "Switch To LED Lights",
+  "Turning Off Lights",
+  "Unpluging Unused Devices",
+  "Washing With Cold Water",
+  "Switching To Solar Power",
+  "Keeping Thermostat Low",
+  "Switching To LED Lights",
 ];
 
 export const cardSelectors = {
@@ -95,7 +95,7 @@ export const pledgeSelectors = {
   pledgeSelect: ".pledge__select",
   pledgeItem: ".pledge",
   pledgeTemplate: "#pledge-template",
-  pledgeText: ".pledge__text"
+  pledgeText: ".pledge__text",
 };
 
 export const navBarSelectors = {
