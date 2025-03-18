@@ -3,42 +3,66 @@ export const cards = [
     src: "../images/icons/switchIcon.jpg",
     alt: "Lightbulb",
     title: "Turn Off Lights",
-    text: ["Extends The Lifespan Of The Bulbs", "second", "third"],
+    text: [
+      "Extends the lifespan of the bulbs",
+      "saves energy, reducing electricity bills",
+      "Promote sustainability by conserving resources",
+    ],
     img: "../images/lightswitch.png",
   },
   {
     src: "../images/icons/plug.png",
     alt: "Plug",
     title: "Unplug Unused Devices",
-    text: ["Prevents Phantom Energy Drain"],
+    text: [
+      "Prevents phantom energy drain",
+      "Saves money on electicity bills",
+      "Extends the lifespan of devices",
+    ],
     img: "../images/unplug.png",
   },
   {
     src: "../images/icons/laundryIcon.png",
-    alt: "Shower",
+    alt: "Laundry",
     title: "Wash With Cold Water",
-    text: ["Helps Garments Last Longer"],
+    text: [
+      "Helps garments last longer",
+      "Reduces need to heat water",
+      "Prevents fabrics from shinking and fading",
+    ],
     img: "../images/laundry.png",
   },
   {
     src: "../images/icons/solarIcon.png",
-    alt: "Water",
-    title: "Switch to Solar Power",
-    text: ["Decreases Electricity Demand From The Grid"],
+    alt: "Solar",
+    title: "Switch To Solar Power",
+    text: [
+      "Decreases electricity demand from the grid",
+      "Reduces reliance on non-rewable energy sources",
+      "Harnesses free energy from the sun",
+    ],
     img: "../images/solar.png",
   },
   {
     src: "../images/icons/thermoIcon.png",
-    alt: "Recycle",
+    alt: "Thermostat",
     title: "Keep Thermostat Low",
-    text: ["Leads To Lower Heating Costs"],
+    text: [
+      "Reduces carbon footprint",
+      "Leads to lower heating costs",
+      "Decreases the strain on heating systems",
+    ],
     img: "../images/thermostat.png",
   },
   {
     src: "../images/icons/ledIcon.png",
-    alt: "Recycle",
-    title: "Switch to LED Lights",
-    text: ["Use up to 80% less electricity"],
+    alt: "LED",
+    title: "Switch To LED Lights",
+    text: [
+      "Durable and eco-friendly",
+      "Use up to 80% less electricity",
+      "Last longer than traditional light bulbs",
+    ],
     img: "../images/led.png",
   },
 ];
@@ -50,7 +74,7 @@ export const initialPledges = [
   },
   {
     name: "Aaron",
-    pledge: "Unpluging Unused Devices",
+    pledge: "Unplugging Unused Devices",
   },
   {
     name: "Stephanie",
@@ -63,12 +87,12 @@ export const initialPledges = [
 ];
 
 export const pledgeOptions = [
-    "Turn Off Lights",
-    "Unplug Unused Devices",
-    "Wash With Cold Water",
-    "Switch To Solar Power",
-    "Keep Thermostat Low",
-    "Switch To LED Lights",
+  "Turning Off Lights",
+  "Unplugging Unused Devices",
+  "Washing With Cold Water",
+  "Switching To Solar Power",
+  "Keeping Thermostat Low",
+  "Switching To LED Lights",
 ];
 
 export const cardSelectors = {
@@ -95,7 +119,7 @@ export const pledgeSelectors = {
   pledgeSelect: ".pledge__select",
   pledgeItem: ".pledge",
   pledgeTemplate: "#pledge-template",
-  pledgeText: ".pledge__text"
+  pledgeText: ".pledge__text",
 };
 
 export const navBarSelectors = {
