@@ -1,6 +1,6 @@
 export const cards = [
   {
-    src: "../images/icons/switchIcon.jpg",
+    src: "images/icons/switchIcon.jpg",
     alt: "Lightbulb",
     title: "Turn Off Lights",
     text: [
