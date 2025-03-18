@@ -5,7 +5,7 @@ export const cards = [
     title: "Turn Off Lights",
     text: [
       "Extends the lifespan of the bulbs",
-      "saves energy, reducing electricity bills",
+      "Saves energy, reducing electricity bills",
       "Promote sustainability by conserving resources",
     ],
     img: "../images/lightswitch.png",
@@ -69,19 +69,19 @@ export const cards = [
 
 export const initialPledges = [
   {
-    name: "Modesto",
+    name: "Stephanie",
     pledge: "Washing With Cold Water",
   },
   {
-    name: "Aaron",
+    name: "Pasha",
     pledge: "Unplugging Unused Devices",
   },
   {
-    name: "Stephanie",
+    name: "Aaron",
     pledge: "Switching To Solar Power",
   },
   {
-    name: "Pasha",
+    name: "Modesto",
     pledge: "Keeping Thermostat Low",
   },
 ];
