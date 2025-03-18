@@ -62,7 +62,15 @@ export const initialPledges = [
   },
 ];
 
-export const pledges = JSON.parse(localStorage.getItem("pledges") || "[]");
+export const pledgeOptions = [
+    "Turn Off Lights",
+    "Unplug Unused Devices",
+    "Wash With Cold Water",
+    "Switch To Solar Power",
+    "Keep Thermostat Low",
+    "Switch To LED Lights",
+];
+
 export const cardSelectors = {
   cardList: ".cards",
   cardTemplate: "#card-template",
@@ -84,12 +92,10 @@ export const pledgeSelectors = {
   pledgeInputName: "#pledge-name",
   pledgeInputText: "#pledge-text",
   pledgeList: ".pledges",
+  pledgeSelect: ".pledge__select",
   pledgeItem: ".pledge",
   pledgeTemplate: "#pledge-template",
-  pledgeText: ".pledge__text",
-  pledgesForm: ".pledge-list__form",
-  pledgeCheckbox: ".pledge__checkbox",
-  pledgeDeleteButton: ".pledge__delete-btn",
+  pledgeText: ".pledge__text"
 };
 
 export const navBarSelectors = {

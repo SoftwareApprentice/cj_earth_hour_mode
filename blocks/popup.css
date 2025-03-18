@@ -42,7 +42,12 @@
     padding: 32px 20px;
 }
 
+.popup__header {
+    position: relative;
+}
+
 .popup__image {
+    position: relative;
     width: 100%;
     height: 100%;
     border-radius: 8px;
@@ -64,7 +69,9 @@
 }
 
 .popup__close {
-    align-self: center;
+    position: absolute;
+    top: 0;
+    right: 0;
     background-image: url("../images/icons/close_icon.svg");
     background-repeat: no-repeat;
     background-size: contain;

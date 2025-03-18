@@ -125,7 +125,14 @@
       <div class="popup" id="card-info-popup">
         <div class="popup__overlay">
           <div class="popup__container">
-            <img class="popup__image" />
+            <div class="popup__header">
+              <img class="popup__image" />
+              <button
+                type="button"
+                class="popup__close popup__close-button"
+                id="card-info-close"
+              ></button>
+            </div>
             <h2 class="popup__title">
               <!-- This text will be dynamically added -->
             </h2>
@@ -133,11 +140,6 @@
               <!-- This text will be dynamically added -->
             </p>
           </div>
-          <button
-            type="button"
-            class="popup__close popup__close-button"
-            id="card-info-close"
-          ></button>
         </div>
       </div>
     </div>
